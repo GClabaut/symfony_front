@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Loader from '../components/Loader'
 
-const Home = () => {
+const Home = ({color}) => {
 
   const [tasks, setTasks] = useState([]);
   const [isLoading, setIsLoading] = useState([true]);
@@ -16,13 +16,12 @@ const Home = () => {
     }
   }, [isLoading]);
 
-  console.log(tasks)
-
   return !isLoading ? (
     tasks?.map((task) => {
       return (
       <div key={task?.id}>
         <h2>{task?.titre}</h2>
+        <span>{color}</span>
       </div>
       );
     })

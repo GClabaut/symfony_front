@@ -22,7 +22,7 @@ function App() {
 
         <Route path="/" element={ <Layout /> }>
 
-          <Route index element={ <Home /> } />
+          <Route index element={ <Home color={"white"} /> } />
 
           <Route path="/contact" element={ <Contact /> } />
 
