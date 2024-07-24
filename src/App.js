@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import normalize from './styles/normalize.css';
+import global from './styles/global.css';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Blogs from './pages/Blogs';
 import NoPage from './pages/NoPage';
+import Login from './pages/Login';
 import Test from './Test';
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
           <Route path="/contact" element={ <Contact /> } />
 
           <Route path="/blogs" element={ <Blogs /> } />
+
+          <Route path="/login" element={ <Login /> } />
 
           <Route path='*' element={ <NoPage /> } />
 
