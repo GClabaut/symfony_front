@@ -1,0 +1,5 @@
+'rafce' to create now page with export and arrow function
+
+We could use 'AXIOS' instead of the normal fetch request in 'lib/fetchData.js' to fetch the data
+
+install JWT decode to decode the token 

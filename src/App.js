@@ -6,7 +6,9 @@ import Contact from './pages/Contact';
 import Blogs from './pages/Blogs';
 import NoPage from './pages/NoPage';
 import Login from './pages/Login';
+import Logout from './pages/Logout';
 import Test from './Test';
+import { ProtectedRoute } from './components/ProtectedRoute.jsx';
 
 function App() {
   return (
@@ -27,9 +29,11 @@ function App() {
 
           <Route path="/contact" element={ <Contact /> } />
 
-          <Route path="/blogs" element={ <Blogs /> } />
+          <Route element={<ProtectedRoute />}><Route path="/blogs" element={ <Blogs /> } /></Route>
 
           <Route path="/login" element={ <Login /> } />
+
+          <Route path="/logout" element={ <Logout /> } />
 
           <Route path='*' element={ <NoPage /> } />
 
